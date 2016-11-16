@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: Lockheed PV-1 Ventura.ma
-//Last modified: Sun, Nov 13, 2016 09:59:51 PM
+//Last modified: Wed, Nov 16, 2016 07:11:54 AM
 //Codeset: 1252
 requires maya "2017";
 requires "stereoCamera" "10.0";
@@ -15,15 +15,15 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "E0551C91-42D0-E01E-201E-45A0EF28DE78";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -65.01006975243574 16.226427349096163 4.2100754805930336 ;
-	setAttr ".r" -type "double3" -12.938352737062274 -1163.3999999997984 1.3836060263057152e-014 ;
+	setAttr ".t" -type "double3" -17.226788884426906 7.6746923518297612 19.969947939870192 ;
+	setAttr ".r" -type "double3" -14.138352737756499 -1469.7999999994806 -9.1630597562369358e-016 ;
 	setAttr ".rp" -type "double3" 2.2204460492503131e-016 -8.8817841970012523e-016 0 ;
 	setAttr ".rpt" -type "double3" -4.42890764018762e-016 9.2609724504963317e-021 2.3392975352582174e-017 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "1D7BDF01-46B6-5D36-4AF6-5B8DE1EDBEB1";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 62.953632370189908;
+	setAttr ".coi" 22.341082279213225;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -398,8 +398,9 @@ createNode nurbsCurve -n "nurbsCircleShape1" -p "nurbsCircle1";
 		0 0 0 0 0 0 0 0;
 createNode transform -n "nurbsCircle2";
 	rename -uid "48E8B258-4BF3-5C6B-3558-90A673332BC5";
-	setAttr ".t" -type "double3" 0 2.7967814866853709 9.8561208525084858 ;
+	setAttr ".t" -type "double3" 0 2.7967814866853709 9.6082142898073464 ;
 	setAttr ".r" -type "double3" 89.999999999999972 -1.9878466759146985e-016 178.73112222755589 ;
+	setAttr ".s" -type "double3" 1.1000647729935269 1 1.0858921690572703 ;
 createNode nurbsCurve -n "nurbsCircleShape2" -p "nurbsCircle2";
 	rename -uid "9CF0893E-435A-968D-8B31-76891F3A2D6A";
 	setAttr -k off ".v";
@@ -2378,6 +2379,7 @@ createNode transform -n "nurbsCircle88";
 	rename -uid "1056E0E3-4240-3285-24A4-C29969A9660D";
 	setAttr ".t" -type "double3" 0 2.7967814866853709 9.8561208525084858 ;
 	setAttr ".r" -type "double3" 89.999999999999972 -1.9878466759146985e-016 178.73112222755589 ;
+	setAttr ".s" -type "double3" 1.0902839418920285 1 1.0887128719609356 ;
 createNode nurbsCurve -n "nurbsCircleShape88" -p "nurbsCircle88";
 	rename -uid "90DD3AC4-4C5F-8982-0CD6-66B6CA822FED";
 	setAttr -k off ".v";
@@ -2399,8 +2401,9 @@ createNode nurbsCurve -n "nurbsCircleShape88" -p "nurbsCircle88";
 		;
 createNode transform -n "nurbsCircle89";
 	rename -uid "7A4963F4-43C9-19B0-A186-8490924A02AF";
-	setAttr ".t" -type "double3" 0 2.7967814866853709 9.8561208525084858 ;
+	setAttr ".t" -type "double3" 0 2.7967814866853709 9.7254628469364643 ;
 	setAttr ".r" -type "double3" 89.999999999999972 -1.9878466759146985e-016 178.73112222755589 ;
+	setAttr ".s" -type "double3" 1.3770960251849826 1 1.1932573684165722 ;
 createNode nurbsCurve -n "nurbsCircleShape89" -p "nurbsCircle89";
 	rename -uid "A32B8E3E-4315-C969-B17F-FBBBB7B01D09";
 	setAttr -k off ".v";
@@ -2420,18 +2423,129 @@ createNode nurbsCurve -n "nurbsCircleShape89" -p "nurbsCircle89";
 		-0.06412450161212678 2.7955390938150941 -0.25958707728234764
 		-0.23071688948282823 2.7632958366556819 -0.20058524449113321
 		;
-createNode transform -n "loftedSurface1";
-	rename -uid "6950A26A-4BBF-6631-31D2-A4BA2B090CF8";
-createNode mesh -n "loftedSurfaceShape1" -p "loftedSurface1";
-	rename -uid "626ED208-43E2-1A51-BA56-DDA92A172F9F";
+createNode transform -n "loftedSurface2";
+	rename -uid "6D7080E4-49E8-6C5C-1AC5-48B9507ED7C3";
+	setAttr ".t" -type "double3" -3.8625002659714651 0 0 ;
+createNode mesh -n "loftedSurfaceShape2" -p "loftedSurface2";
+	rename -uid "10C6DAFA-4F8E-4CE6-CBC5-798AB13C35C1";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.5 0.5 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 712 ".pt";
+	setAttr ".pt[0:165]" -type "float3"  -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 
+		-3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 
+		0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0;
+	setAttr ".pt[166:331]" -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0;
+	setAttr ".pt[332:497]" -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0;
+	setAttr ".pt[498:663]" -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0;
+	setAttr ".pt[664:711]" -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 0 0 -3.8625 
+		0 0 -3.8625 0 0;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "217EE3E4-4261-DB55-1D7D-59B98E35D594";
@@ -2533,27 +2647,27 @@ createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "D7D10AFB-45CF-C20F-C6B1-899DBC3AEF6B";
 	setAttr ".b" -type "string" "playbackOptions -min 1 -max 120 -ast 1 -aet 200 ";
 	setAttr ".st" 6;
-createNode loft -n "loft1";
-	rename -uid "80590C91-4FDB-FF8C-B517-96B5F60553AC";
-	setAttr -s 89 ".ic";
-	setAttr ".u" yes;
-	setAttr ".rsn" yes;
-	setAttr ".ss" 3;
-createNode nurbsTessellate -n "nurbsTessellate1";
-	rename -uid "90F86711-49D4-9796-B07E-B38212D33355";
-	setAttr ".pt" 1;
-	setAttr ".chr" 0.9;
-	setAttr ".ut" 1;
-	setAttr ".vt" 1;
-	setAttr ".ucr" no;
-	setAttr ".cht" 0.2;
-createNode polyNormal -n "polyNormal1";
-	rename -uid "5E072285-4D5D-BC99-54D8-38B14F418452";
-	setAttr ".ics" -type "componentList" 1 "f[*]";
-	setAttr ".unm" no;
 createNode makeNurbCircle -n "makeNurbCircle1";
 	rename -uid "618C1D1C-4418-8751-911F-D9A99DEA8651";
 	setAttr ".nr" -type "double3" 0 1 0 ;
+createNode loft -n "loft2";
+	rename -uid "CEBD6E57-42D6-C2C8-2E8E-ABA4C83D403C";
+	setAttr -s 89 ".ic";
+	setAttr ".u" yes;
+	setAttr ".rsn" yes;
+createNode nurbsTessellate -n "nurbsTessellate2";
+	rename -uid "26DF29A8-42BA-C54D-E994-138E23127738";
+	setAttr ".f" 2;
+	setAttr ".pt" 1;
+	setAttr ".chr" 0.9;
+	setAttr ".un" 1;
+	setAttr ".vn" 1;
+	setAttr ".ucr" no;
+	setAttr ".cht" 0.01;
+createNode polyNormal -n "polyNormal1";
+	rename -uid "2B591103-4744-0BC1-0E94-4D91A737986C";
+	setAttr ".ics" -type "componentList" 1 "f[*]";
+	setAttr ".unm" no;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
@@ -2608,104 +2722,104 @@ connectAttr ":defaultColorMgtGlobals.cfp" "imagePlaneShape5.cmcp";
 connectAttr ":defaultColorMgtGlobals.wsn" "imagePlaneShape5.ws";
 connectAttr ":perspShape.msg" "imagePlaneShape5.ltc";
 connectAttr "makeNurbCircle1.oc" "nurbsCircleShape1.cr";
-connectAttr "polyNormal1.out" "loftedSurfaceShape1.i";
+connectAttr "polyNormal1.out" "loftedSurfaceShape2.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 connectAttr "layerManager.dli[0]" "defaultLayer.id";
 connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
-connectAttr "nurbsCircleShape2.ws" "loft1.ic[0]";
-connectAttr "nurbsCircleShape89.ws" "loft1.ic[1]";
-connectAttr "nurbsCircleShape88.ws" "loft1.ic[2]";
-connectAttr "nurbsCircleShape87.ws" "loft1.ic[3]";
-connectAttr "nurbsCircleShape86.ws" "loft1.ic[4]";
-connectAttr "nurbsCircleShape85.ws" "loft1.ic[5]";
-connectAttr "nurbsCircleShape84.ws" "loft1.ic[6]";
-connectAttr "nurbsCircleShape3.ws" "loft1.ic[7]";
-connectAttr "nurbsCircleShape1.ws" "loft1.ic[8]";
-connectAttr "nurbsCircleShape5.ws" "loft1.ic[9]";
-connectAttr "nurbsCircleShape6.ws" "loft1.ic[10]";
-connectAttr "nurbsCircleShape7.ws" "loft1.ic[11]";
-connectAttr "nurbsCircleShape8.ws" "loft1.ic[12]";
-connectAttr "nurbsCircleShape9.ws" "loft1.ic[13]";
-connectAttr "nurbsCircleShape10.ws" "loft1.ic[14]";
-connectAttr "nurbsCircleShape11.ws" "loft1.ic[15]";
-connectAttr "nurbsCircleShape12.ws" "loft1.ic[16]";
-connectAttr "nurbsCircleShape13.ws" "loft1.ic[17]";
-connectAttr "nurbsCircleShape14.ws" "loft1.ic[18]";
-connectAttr "nurbsCircleShape15.ws" "loft1.ic[19]";
-connectAttr "nurbsCircleShape16.ws" "loft1.ic[20]";
-connectAttr "nurbsCircleShape17.ws" "loft1.ic[21]";
-connectAttr "nurbsCircleShape18.ws" "loft1.ic[22]";
-connectAttr "nurbsCircleShape19.ws" "loft1.ic[23]";
-connectAttr "nurbsCircleShape20.ws" "loft1.ic[24]";
-connectAttr "nurbsCircleShape21.ws" "loft1.ic[25]";
-connectAttr "nurbsCircleShape22.ws" "loft1.ic[26]";
-connectAttr "nurbsCircleShape23.ws" "loft1.ic[27]";
-connectAttr "nurbsCircleShape24.ws" "loft1.ic[28]";
-connectAttr "nurbsCircleShape25.ws" "loft1.ic[29]";
-connectAttr "nurbsCircleShape26.ws" "loft1.ic[30]";
-connectAttr "nurbsCircleShape27.ws" "loft1.ic[31]";
-connectAttr "nurbsCircleShape28.ws" "loft1.ic[32]";
-connectAttr "nurbsCircleShape29.ws" "loft1.ic[33]";
-connectAttr "nurbsCircleShape30.ws" "loft1.ic[34]";
-connectAttr "nurbsCircleShape31.ws" "loft1.ic[35]";
-connectAttr "nurbsCircleShape32.ws" "loft1.ic[36]";
-connectAttr "nurbsCircleShape33.ws" "loft1.ic[37]";
-connectAttr "nurbsCircleShape34.ws" "loft1.ic[38]";
-connectAttr "nurbsCircleShape35.ws" "loft1.ic[39]";
-connectAttr "nurbsCircleShape36.ws" "loft1.ic[40]";
-connectAttr "nurbsCircleShape37.ws" "loft1.ic[41]";
-connectAttr "nurbsCircleShape38.ws" "loft1.ic[42]";
-connectAttr "nurbsCircleShape39.ws" "loft1.ic[43]";
-connectAttr "nurbsCircleShape40.ws" "loft1.ic[44]";
-connectAttr "nurbsCircleShape41.ws" "loft1.ic[45]";
-connectAttr "nurbsCircleShape42.ws" "loft1.ic[46]";
-connectAttr "nurbsCircleShape43.ws" "loft1.ic[47]";
-connectAttr "nurbsCircleShape44.ws" "loft1.ic[48]";
-connectAttr "nurbsCircleShape45.ws" "loft1.ic[49]";
-connectAttr "nurbsCircleShape46.ws" "loft1.ic[50]";
-connectAttr "nurbsCircleShape47.ws" "loft1.ic[51]";
-connectAttr "nurbsCircleShape48.ws" "loft1.ic[52]";
-connectAttr "nurbsCircleShape49.ws" "loft1.ic[53]";
-connectAttr "nurbsCircleShape50.ws" "loft1.ic[54]";
-connectAttr "nurbsCircleShape51.ws" "loft1.ic[55]";
-connectAttr "nurbsCircleShape52.ws" "loft1.ic[56]";
-connectAttr "nurbsCircleShape53.ws" "loft1.ic[57]";
-connectAttr "nurbsCircleShape54.ws" "loft1.ic[58]";
-connectAttr "nurbsCircleShape55.ws" "loft1.ic[59]";
-connectAttr "nurbsCircleShape56.ws" "loft1.ic[60]";
-connectAttr "nurbsCircleShape57.ws" "loft1.ic[61]";
-connectAttr "nurbsCircleShape58.ws" "loft1.ic[62]";
-connectAttr "nurbsCircleShape59.ws" "loft1.ic[63]";
-connectAttr "nurbsCircleShape60.ws" "loft1.ic[64]";
-connectAttr "nurbsCircleShape61.ws" "loft1.ic[65]";
-connectAttr "nurbsCircleShape62.ws" "loft1.ic[66]";
-connectAttr "nurbsCircleShape63.ws" "loft1.ic[67]";
-connectAttr "nurbsCircleShape64.ws" "loft1.ic[68]";
-connectAttr "nurbsCircleShape65.ws" "loft1.ic[69]";
-connectAttr "nurbsCircleShape66.ws" "loft1.ic[70]";
-connectAttr "nurbsCircleShape67.ws" "loft1.ic[71]";
-connectAttr "nurbsCircleShape68.ws" "loft1.ic[72]";
-connectAttr "nurbsCircleShape69.ws" "loft1.ic[73]";
-connectAttr "nurbsCircleShape70.ws" "loft1.ic[74]";
-connectAttr "nurbsCircleShape71.ws" "loft1.ic[75]";
-connectAttr "nurbsCircleShape72.ws" "loft1.ic[76]";
-connectAttr "nurbsCircleShape73.ws" "loft1.ic[77]";
-connectAttr "nurbsCircleShape74.ws" "loft1.ic[78]";
-connectAttr "nurbsCircleShape75.ws" "loft1.ic[79]";
-connectAttr "nurbsCircleShape76.ws" "loft1.ic[80]";
-connectAttr "nurbsCircleShape77.ws" "loft1.ic[81]";
-connectAttr "nurbsCircleShape78.ws" "loft1.ic[82]";
-connectAttr "nurbsCircleShape79.ws" "loft1.ic[83]";
-connectAttr "nurbsCircleShape80.ws" "loft1.ic[84]";
-connectAttr "nurbsCircleShape81.ws" "loft1.ic[85]";
-connectAttr "nurbsCircleShape82.ws" "loft1.ic[86]";
-connectAttr "nurbsCircleShape83.ws" "loft1.ic[87]";
-connectAttr "nurbsCircleShape4.ws" "loft1.ic[88]";
-connectAttr "loft1.os" "nurbsTessellate1.is";
-connectAttr "nurbsTessellate1.op" "polyNormal1.ip";
+connectAttr "nurbsCircleShape2.ws" "loft2.ic[0]";
+connectAttr "nurbsCircleShape89.ws" "loft2.ic[1]";
+connectAttr "nurbsCircleShape88.ws" "loft2.ic[2]";
+connectAttr "nurbsCircleShape87.ws" "loft2.ic[3]";
+connectAttr "nurbsCircleShape86.ws" "loft2.ic[4]";
+connectAttr "nurbsCircleShape85.ws" "loft2.ic[5]";
+connectAttr "nurbsCircleShape84.ws" "loft2.ic[6]";
+connectAttr "nurbsCircleShape3.ws" "loft2.ic[7]";
+connectAttr "nurbsCircleShape1.ws" "loft2.ic[8]";
+connectAttr "nurbsCircleShape5.ws" "loft2.ic[9]";
+connectAttr "nurbsCircleShape6.ws" "loft2.ic[10]";
+connectAttr "nurbsCircleShape7.ws" "loft2.ic[11]";
+connectAttr "nurbsCircleShape8.ws" "loft2.ic[12]";
+connectAttr "nurbsCircleShape9.ws" "loft2.ic[13]";
+connectAttr "nurbsCircleShape10.ws" "loft2.ic[14]";
+connectAttr "nurbsCircleShape11.ws" "loft2.ic[15]";
+connectAttr "nurbsCircleShape12.ws" "loft2.ic[16]";
+connectAttr "nurbsCircleShape13.ws" "loft2.ic[17]";
+connectAttr "nurbsCircleShape14.ws" "loft2.ic[18]";
+connectAttr "nurbsCircleShape15.ws" "loft2.ic[19]";
+connectAttr "nurbsCircleShape16.ws" "loft2.ic[20]";
+connectAttr "nurbsCircleShape17.ws" "loft2.ic[21]";
+connectAttr "nurbsCircleShape18.ws" "loft2.ic[22]";
+connectAttr "nurbsCircleShape19.ws" "loft2.ic[23]";
+connectAttr "nurbsCircleShape20.ws" "loft2.ic[24]";
+connectAttr "nurbsCircleShape21.ws" "loft2.ic[25]";
+connectAttr "nurbsCircleShape22.ws" "loft2.ic[26]";
+connectAttr "nurbsCircleShape23.ws" "loft2.ic[27]";
+connectAttr "nurbsCircleShape24.ws" "loft2.ic[28]";
+connectAttr "nurbsCircleShape25.ws" "loft2.ic[29]";
+connectAttr "nurbsCircleShape26.ws" "loft2.ic[30]";
+connectAttr "nurbsCircleShape27.ws" "loft2.ic[31]";
+connectAttr "nurbsCircleShape28.ws" "loft2.ic[32]";
+connectAttr "nurbsCircleShape29.ws" "loft2.ic[33]";
+connectAttr "nurbsCircleShape30.ws" "loft2.ic[34]";
+connectAttr "nurbsCircleShape31.ws" "loft2.ic[35]";
+connectAttr "nurbsCircleShape32.ws" "loft2.ic[36]";
+connectAttr "nurbsCircleShape33.ws" "loft2.ic[37]";
+connectAttr "nurbsCircleShape34.ws" "loft2.ic[38]";
+connectAttr "nurbsCircleShape35.ws" "loft2.ic[39]";
+connectAttr "nurbsCircleShape36.ws" "loft2.ic[40]";
+connectAttr "nurbsCircleShape37.ws" "loft2.ic[41]";
+connectAttr "nurbsCircleShape38.ws" "loft2.ic[42]";
+connectAttr "nurbsCircleShape39.ws" "loft2.ic[43]";
+connectAttr "nurbsCircleShape40.ws" "loft2.ic[44]";
+connectAttr "nurbsCircleShape41.ws" "loft2.ic[45]";
+connectAttr "nurbsCircleShape42.ws" "loft2.ic[46]";
+connectAttr "nurbsCircleShape43.ws" "loft2.ic[47]";
+connectAttr "nurbsCircleShape44.ws" "loft2.ic[48]";
+connectAttr "nurbsCircleShape45.ws" "loft2.ic[49]";
+connectAttr "nurbsCircleShape46.ws" "loft2.ic[50]";
+connectAttr "nurbsCircleShape47.ws" "loft2.ic[51]";
+connectAttr "nurbsCircleShape48.ws" "loft2.ic[52]";
+connectAttr "nurbsCircleShape49.ws" "loft2.ic[53]";
+connectAttr "nurbsCircleShape50.ws" "loft2.ic[54]";
+connectAttr "nurbsCircleShape51.ws" "loft2.ic[55]";
+connectAttr "nurbsCircleShape52.ws" "loft2.ic[56]";
+connectAttr "nurbsCircleShape53.ws" "loft2.ic[57]";
+connectAttr "nurbsCircleShape54.ws" "loft2.ic[58]";
+connectAttr "nurbsCircleShape55.ws" "loft2.ic[59]";
+connectAttr "nurbsCircleShape56.ws" "loft2.ic[60]";
+connectAttr "nurbsCircleShape57.ws" "loft2.ic[61]";
+connectAttr "nurbsCircleShape58.ws" "loft2.ic[62]";
+connectAttr "nurbsCircleShape59.ws" "loft2.ic[63]";
+connectAttr "nurbsCircleShape60.ws" "loft2.ic[64]";
+connectAttr "nurbsCircleShape61.ws" "loft2.ic[65]";
+connectAttr "nurbsCircleShape62.ws" "loft2.ic[66]";
+connectAttr "nurbsCircleShape63.ws" "loft2.ic[67]";
+connectAttr "nurbsCircleShape64.ws" "loft2.ic[68]";
+connectAttr "nurbsCircleShape65.ws" "loft2.ic[69]";
+connectAttr "nurbsCircleShape66.ws" "loft2.ic[70]";
+connectAttr "nurbsCircleShape67.ws" "loft2.ic[71]";
+connectAttr "nurbsCircleShape68.ws" "loft2.ic[72]";
+connectAttr "nurbsCircleShape69.ws" "loft2.ic[73]";
+connectAttr "nurbsCircleShape70.ws" "loft2.ic[74]";
+connectAttr "nurbsCircleShape71.ws" "loft2.ic[75]";
+connectAttr "nurbsCircleShape72.ws" "loft2.ic[76]";
+connectAttr "nurbsCircleShape73.ws" "loft2.ic[77]";
+connectAttr "nurbsCircleShape74.ws" "loft2.ic[78]";
+connectAttr "nurbsCircleShape75.ws" "loft2.ic[79]";
+connectAttr "nurbsCircleShape76.ws" "loft2.ic[80]";
+connectAttr "nurbsCircleShape77.ws" "loft2.ic[81]";
+connectAttr "nurbsCircleShape78.ws" "loft2.ic[82]";
+connectAttr "nurbsCircleShape79.ws" "loft2.ic[83]";
+connectAttr "nurbsCircleShape80.ws" "loft2.ic[84]";
+connectAttr "nurbsCircleShape81.ws" "loft2.ic[85]";
+connectAttr "nurbsCircleShape82.ws" "loft2.ic[86]";
+connectAttr "nurbsCircleShape83.ws" "loft2.ic[87]";
+connectAttr "nurbsCircleShape4.ws" "loft2.ic[88]";
+connectAttr "loft2.os" "nurbsTessellate2.is";
+connectAttr "nurbsTessellate2.op" "polyNormal1.ip";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
-connectAttr "loftedSurfaceShape1.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "loftedSurfaceShape2.iog" ":initialShadingGroup.dsm" -na;
 // End of Lockheed PV-1 Ventura.ma
